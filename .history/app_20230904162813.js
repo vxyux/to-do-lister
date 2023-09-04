@@ -26,12 +26,7 @@ function newTask() {
 
     // create dynamic ids for the tasks that the user would create
     let taskName = 'task-' + nextTaskId;
-
-    // insert into the localstorage
-    let newLocal = window.localStorage.setItem(
-      taskName,
-      userInput.value
-    );
+    let newLocal = localStorage.setItem(taskName, userInput.value);
 
     let x = localStorage.getItem(taskName);
 

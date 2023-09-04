@@ -28,10 +28,7 @@ function newTask() {
     let taskName = 'task-' + nextTaskId;
 
     // insert into the localstorage
-    let newLocal = window.localStorage.setItem(
-      taskName,
-      userInput.value
-    );
+    let newLocal = localStorage.setItem(taskName, userInput.value);
 
     let x = localStorage.getItem(taskName);
 

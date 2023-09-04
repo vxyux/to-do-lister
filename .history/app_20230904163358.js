@@ -51,6 +51,7 @@ function completeTask(task_id) {
 }
 
 function controlTasks() {
+  let tasks = Array.from(JSON.parse(localStorage.getItem('task-2')));
   var element = document.getElementById('to-dos');
   var numberOfChildren = element.getElementsByTagName('*').length;
 

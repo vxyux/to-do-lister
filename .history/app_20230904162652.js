@@ -24,16 +24,10 @@ function newTask() {
     // make element the tag's parent
     element.appendChild(tag);
 
-    // create dynamic ids for the tasks that the user would create
     let taskName = 'task-' + nextTaskId;
+    let newLocal = localStorage.setItem(taskName, userInput.value);
 
-    // insert into the localstorage
-    let newLocal = window.localStorage.setItem(
-      taskName,
-      userInput.value
-    );
-
-    let x = localStorage.getItem(taskName);
+    let x = localStorage.getItem();
 
     console.log(x);
 

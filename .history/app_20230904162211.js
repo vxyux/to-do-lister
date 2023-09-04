@@ -14,6 +14,8 @@ function newTask() {
     tag.setAttribute('id', nextTaskId);
     tag.setAttribute('onclick', 'completeTask(this.id)');
 
+    let taskName = 'task-' + nextTaskId;
+
     // assign the userInput var with content
     var content = document.createTextNode(userInput.value);
     tag.appendChild(content); // make tag the content's parent
@@ -24,18 +26,7 @@ function newTask() {
     // make element the tag's parent
     element.appendChild(tag);
 
-    // create dynamic ids for the tasks that the user would create
-    let taskName = 'task-' + nextTaskId;
-
-    // insert into the localstorage
-    let newLocal = window.localStorage.setItem(
-      taskName,
-      userInput.value
-    );
-
-    let x = localStorage.getItem(taskName);
-
-    console.log(x);
+    localStorage.setItem(taskName, content);
 
     //document.getElementById('form').reset();
   }

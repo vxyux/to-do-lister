@@ -51,6 +51,19 @@ function completeTask(task_id) {
 }
 
 function controlTasks() {
+  let tasks = Array.from(JSON.parse(localStorage.getItem('task-2')));
+    tasks.forEach((task) => {
+      const list = document.querySelector('ul');
+      const li = document.createElement('li');
+      li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check" ${
+        task.completed ? 'checked' : ''
+      }>
+          <input type="text" value="${task.task}" class="task ${
+        task.completed ? 'completed' : ''
+      }" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+          <i class="fa fa-trash" onclick="removeTask(this)"></i>`;
+      list.insertBefore(li, list.children[0]);
+    });
   var element = document.getElementById('to-dos');
   var numberOfChildren = element.getElementsByTagName('*').length;
 

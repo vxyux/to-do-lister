@@ -9,7 +9,7 @@ function newTask() {
   } else {
     // define tag that creates a new element under the tag 'li'
     var tag = document.createElement('li');
-    // adding class 'task_item', id as the next number, and onclick on the corresponding function to that tag.
+    // adding class 'task_item' to that tag.
     tag.classList.add('task_item');
     tag.setAttribute('id', nextTaskId);
     tag.setAttribute('onclick', 'completeTask(this.id)');
@@ -23,19 +23,6 @@ function newTask() {
 
     // make element the tag's parent
     element.appendChild(tag);
-
-    // create dynamic ids for the tasks that the user would create
-    let taskName = 'task-' + nextTaskId;
-
-    // insert into the localstorage
-    let newLocal = window.localStorage.setItem(
-      taskName,
-      userInput.value
-    );
-
-    let x = localStorage.getItem(taskName);
-
-    console.log(x);
 
     //document.getElementById('form').reset();
   }
