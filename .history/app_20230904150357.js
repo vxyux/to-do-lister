@@ -1,0 +1,4 @@
+function newTask()
+{
+  console.log()
+}

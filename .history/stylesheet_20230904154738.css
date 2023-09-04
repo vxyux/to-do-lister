@@ -1,0 +1,26 @@
+*
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.task_item {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  font-weight: bold; /* Making font bold */
+  border-radius: 10px; /* Making border radius */
+  width: auto; /* Making auto-sizable width */
+  height: auto; /* Making auto-sizable height */
+  padding: 5px 30px 5px 30px; /* Making space around letters */
+
+  transition: 250ms;
+}
+
+.task_item:hover {
+  background-color: red;
+  transition: 250ms;
+}
