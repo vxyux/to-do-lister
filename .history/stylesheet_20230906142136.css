@@ -1,0 +1,42 @@
+*
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.task_item {
+  border-style: solid;
+  border-width: 4px;
+  border-color: blue;
+  font-weight: bold; /* Making font bold */
+  border-radius: 10px; /* Making border radius */
+  width: auto; /* Making auto-sizable width */
+  height: auto; /* Making auto-sizable height */
+  padding: 5px 30px 10px 30px; /* Making space around letters */
+  margin-bottom: 8px;
+
+  transition: 250ms;
+}
+
+.task_item_due {
+  border-style: solid;
+  border-width: 4px;
+  border-color: red;
+  font-weight: bold; /* Making font bold */
+  border-radius: 10px; /* Making border radius */
+  width: auto; /* Making auto-sizable width */
+  height: auto; /* Making auto-sizable height */
+  padding: 5px 30px 10px 30px; /* Making space around letters */
+  margin-bottom: 8px;
+
+  transition: 250ms;
+}
+
+.task_item:hover {
+  background-color: red;
+  border-color: red;
+  transition: 250ms;
+}
